@@ -1,0 +1,109 @@
+/**
+ * Style CSS for exercise 2
+ * Jerome Manceau
+ */
+
+ /* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    padding-bottom: 10px;
+}
+
+/* Body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Container */
+.container {
+    padding: 20px;
+    width: 100%;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+.tabs__wrapper {
+    display:flex; 
+    flex-direction: column;
+}
+
+.tab {
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+.tab__title {
+    display:flex; 
+    flex-wrap:nowrap;
+}
+
+.tab__content {
+    display: flex;
+    width: 100%;
+    min-width: 400px;
+    max-width: 800px;
+    border: 1px solid #f1f1f1;
+    padding: 10px;
+}
+
+.tab.active {
+    background-color: #ccc;
+    font-weight: bold;
+}
+
+.accordion__section {
+    margin-bottom: 10px;
+}
+
+.accordion__title {
+    cursor: pointer;
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
+.accordion__title.active {
+    background-color: #ccc;
+    font-weight: bold;
+    max-height: 1000px;
+}
+
+.accordion__content {
+    padding: 0;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    border-right: 1px solid #f1f1f1;
+    border-left: 1px solid #f1f1f1;
+}
+.accordion__content:last-of-type {
+    border-bottom: 1px solid #f1f1f1;
+}
+.accordion__content.active {
+    padding: 10px;
+    opacity: 1;
+    max-height: 1000px;
+    transition: max-height 1s ease-in, padding-top .5s ease-in, padding-bottom .5s ease-in, opacity 1s ease-in;
+}
+
+/* Format for tab/accordion */
+ul {
+    padding-left: 10px;
+    margin-left: 10px;
+}
+strong, b {
+    font-weight: bold;
+}
