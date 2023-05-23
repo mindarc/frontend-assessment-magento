@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <title>Exercise 2 - Tabs &amp; Accordion</title>
+
+</head>
+<body>
+
+    <div class="container">
+
+      <h1>Tabs &amp; Accordion</h1>
+
+      <!-- Desktop Section / Tabs -->
+      <div class="tabs" data-bind="visible: isDesktop">
+        <div class="tabs__wrapper">
+          <div class="tab__title" data-bind="foreach: sections">
+            <div class="tab" data-bind="click: toggleContent, css: { active: isActive }, text: title"></div>
+          </div>
+          <div class="tab__content" data-bind="foreach: sections">
+            <div class="content" data-bind="visible: isActive, html: content">Content 1</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Mobile Section / Accordion -->
+      <div class="accordion" data-bind="visible: isMobile">
+        <div class="accordion__section" data-bind="foreach: sections">
+          <div class="accordion__title" data-bind="click: toggleContent, css: { active: isActive }">
+            <span data-bind="text: title"></span>
+          </div>
+          <div class="accordion__content" data-bind="css: { active: isActive }, html: content"></div>
+        </div>
+      </div>
+    
+</body>
+
+<script src="assets/js/custom.js"></script>
+</html>

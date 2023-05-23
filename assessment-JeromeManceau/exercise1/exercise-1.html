@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <title>Exercise 1 - Page Design</title>
+</head>
+<body>
+    
+    <div class="container">
+       
+        <header>
+            <div class="header__banner">
+    
+                <h1>Hello Developer!</h1>
+                <p>Lorem ipsum, dolor sit amet, consectetur adipisicing elit</p>
+                
+            </div>
+        </header>
+
+        <main>
+
+            <div class="box-section">
+                <div class="info-box">
+                    <div>
+                        <img src="assets/images/image-400x300.png" alt="content image">
+                        <div class="info-box__text">
+                            Lorem ipsum dolor sit amet, consectuetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+                    <button class="info-box__button">Read More</button>
+                </div>
+                <div class="info-box">
+                    <div>
+                        <img src="assets/images/image-400x300.png" alt="content image">
+                        <div class="info-box__text">
+                            Lorem ipsum dolor sit amet, consectuetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </div>
+                    </div>
+                    <button class="info-box__button">Read More</button>
+                </div>
+                <div class="info-box">
+                    <div>
+                        <img src="assets/images/image-400x300.png" alt="content image">
+                        <div class="info-box__text">
+                            Lorem ipsum dolor sit amet, consectuetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+                    <button class="info-box__button">Read More</button>
+                </div>
+            </div>
+
+        </main>
+        
+    </div>
+
+
+</body>
+<script>
+    $(document).ready(function() {
+        var headerSection   = $('header');
+        var mainSection     = $('main');
+
+        headerSection.addClass('in-view');
+        $(window).scroll(function() {
+            if (isElementInViewport(mainSection) && !mainSection.hasClass('in-view')) {
+                mainSection.addClass('in-view');
+            }
+        });
+
+        function isElementInViewport(element) {
+            var windowHeight = $(window).height();
+            var windowTop = $(window).scrollTop();
+            var elementTop = element.offset().top;
+
+            return (elementTop <= (windowTop + windowHeight));
+        }
+    });
+</script>
+</html>
