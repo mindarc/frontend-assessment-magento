@@ -85,7 +85,6 @@ function initUI(isMobile, data, container) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("DOM is ready"); // Log when DOM is ready
   let isMobile = window.innerWidth <= 768;
   const container = document.getElementById("content");
 
