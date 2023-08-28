@@ -90,7 +90,12 @@ body {
 }
 
 .card-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
+  height: 100%;
 }
 
 .card-img {
@@ -101,6 +106,7 @@ body {
 
 .card-content {
   padding: 20px;
+  flex-grow: 1;
 }
 
 .read-more {
