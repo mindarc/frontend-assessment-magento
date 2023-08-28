@@ -1,5 +1,5 @@
 function fetchData() {
-  return fetch("../../data.json")
+  return fetch("../data.json")
     .then((response) => response.json())
     .catch((error) => console.error(error));
 }
@@ -85,6 +85,7 @@ function initUI(isMobile, data, container) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+  console.log("DOM is ready"); // Log when DOM is ready
   let isMobile = window.innerWidth <= 768;
   const container = document.getElementById("content");
 
