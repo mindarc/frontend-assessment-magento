@@ -1,23 +1,7 @@
-Introduction
----
-Thanks for taking the time to complete this frontend technical assessment. We will be focusing on software quality (scalability, readability, maintainability, etc.) and your eye for detail. For styling, please use LESS, SASS or CSS without a UI library such as Bootstrap. For JavaScript, please use jQuery, KnockoutJS or vanilla JS. Along with following best practices, there will be bonus points for following our [coding guidelines](https://github.com/mindarc/frontend-assessment/wiki/Coding-guidelines). 
+# Instructions to run the project
+* I have created `index.html` inside src folder, which will have two buttons to run the two exercises.
+* For `exercise 1`, I tried to make it as simple as possible and used only `HTML`, and `CSS`, there was no need to use any `JS`.
 
-Exercise 1
----
-Build a responsive page based on the designs.
-
-##### Requirements
-1. Match the designs exactly.
-2. Needs to be responsive and fluid.
-
-##### Designs
-* exercise1-desktop.png
-* exercise1-mobile.png
-
-##### Assets
-* Desktop banner - https://via.placeholder.com/1920x650
-* Mobile banner - https://via.placeholder.com/600x600
-* Content images - https://via.placeholder.com/400x300
 
 Exercise 2
 ---
@@ -34,7 +18,3 @@ Read the `data.json` file and display the data as tabs on desktop and an accordi
 * Improve the user experience with meaningful animations/transitions.
 * Design and styling.
 * Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
-
-Submission
----
-We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
