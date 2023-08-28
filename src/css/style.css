@@ -1,3 +1,4 @@
+/* Exercise 1 */
 /* Reset default margin and padding */
 html,
 body {
@@ -153,4 +154,78 @@ body {
   .banner-text p {
     font-size: 1em;
   }
+}
+
+/* Exercise 2 */
+
+#content {
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabs */
+.tab-buttons {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+
+.tab-button {
+  flex-grow: 1;
+  padding: 12px;
+  cursor: pointer;
+  background: #f9f9f9;
+  border: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.tab-button.active {
+  font-weight: 600;
+  border-bottom: 2px solid #007bff;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Accordion */
+.accordion-button {
+  width: 100%;
+  text-align: left;
+  padding: 12px;
+  cursor: pointer;
+  background: #f9f9f9;
+  border: none;
+  transition: 0.3s ease;
+}
+
+.accordion-button.active {
+  background: #e9e9e9;
+}
+
+.accordion-content {
+  display: none;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  background: #fff;
+  transition: max-height 0.3s ease-in-out;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.accordion-content.active {
+  display: block;
+  max-height: 100vh;
 }
