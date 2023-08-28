@@ -1,0 +1,135 @@
+/* Reset default margin and padding */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.browsehappy {
+  background-color: #ffcccb;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {
+  background-color: #3e8e41;
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* Banner */
+.banner {
+  position: relative;
+  width: 100%;
+  max-height: 650px;
+  overflow: hidden;
+}
+
+.banner-img {
+  width: 100%;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+}
+
+.banner-text h1 {
+  font-size: 5em;
+  margin-bottom: 0em;
+}
+
+.banner-text p {
+  font-size: 2em;
+}
+
+/* Hide mobile image by default */
+.banner-img.mobile {
+  display: none;
+}
+
+/* Cards */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 350px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.card-inner {
+  text-align: center;
+}
+
+.card-img {
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.read-more {
+  display: inline-block;
+  padding: 8px 20px;
+  border: 3px solid #000;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+  margin: 16px auto;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+  .banner-img.desktop {
+    display: none;
+  }
+  .banner-img.mobile {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .banner-text h1 {
+    font-size: 2em;
+  }
+  .banner-text p {
+    font-size: 1em;
+  }
+}
