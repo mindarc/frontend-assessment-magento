@@ -1,40 +1,22 @@
-Introduction
----
-Thanks for taking the time to complete this frontend technical assessment. We will be focusing on software quality (scalability, readability, maintainability, etc.) and your eye for detail. For styling, please use LESS, SASS or CSS without a UI library such as Bootstrap. For JavaScript, please use jQuery, KnockoutJS or vanilla JS. Along with following best practices, there will be bonus points for following our [coding guidelines](https://github.com/mindarc/frontend-assessment/wiki/Coding-guidelines). 
+# Instructions to run the project
+## Running the project locally
 
-Exercise 1
----
-Build a responsive page based on the designs.
+1. Clone the repository
+2. You will need local http server to run the project, I used `live-server` from vscode extensions. You can find it [here](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+3. There are other http servers as well, you can use any of them. such as `http-server`.
 
-##### Requirements
-1. Match the designs exactly.
-2. Needs to be responsive and fluid.
+## note 
+* Without local http server, the project will not run properly, as it will not be able to load the `json` file.
 
-##### Designs
-* exercise1-desktop.png
-* exercise1-mobile.png
+### Tasks completed
 
-##### Assets
-* Desktop banner - https://via.placeholder.com/1920x650
-* Mobile banner - https://via.placeholder.com/600x600
-* Content images - https://via.placeholder.com/400x300
+* I have created `index.html` inside src folder, which will have two buttons to run the two exercises.
+* For `exercise 1`, I tried to make it as simple as possible and used only `HTML`, and `CSS`, there was no need to use any `JS`.
+* For `exercise 2`, I used `HTML`, `CSS`, and `vanilla JS`.
 
-Exercise 2
----
-Read the `data.json` file and display the data as tabs on desktop and an accordion on mobile.
-
-##### Requirements
-1. Display data in tabs on desktop.
-2. Display data in an accordion on mobile.
-3. Only 1 accordion/tab should be open at a time.
-4. Open the first accordion/tab on load.
-5. If the open accordion is selected, close it.
-
-###### Bonus points
-* Improve the user experience with meaningful animations/transitions.
-* Design and styling.
-* Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
-
-Submission
----
-We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
+# Explantaion
+1. 'b' + 'a': Both are strings, so they get concatenated to form "ba".
+2. \+ 'a': The unary plus (+) operator tries to convert the string 'a' to a number. Since 'a' is not a number, it returns NaN which is Not a Number.
+3. ba' + NaN: The result of the first step "ba" (a string) is concatenated with NaN (Not a Number), resulting in "baNaN".
+4. 'baNaN' + 'a': Finally, the string "baNaN" is concatenated with the string 'a', resulting in "baNaNa".
+5. Which then uses `.toLowerCase()` method as it says, it lowercases the string resulting in "banana".
