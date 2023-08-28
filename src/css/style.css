@@ -125,9 +125,9 @@ body {
 
 .read-more:hover {
   background-color: #000;
-  color: #fff; /* text becomes white */
+  color: #fff;
   border: 3px solid transparent;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 .read-more:active {
