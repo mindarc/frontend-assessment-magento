@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="container-desktop">
+        <div id="custom-tab" class="product data items" >
+            <?php foreach (json_decode($block->getListData()) as $key => $data): ?>
+                <div class="item title" data-role="collapsible">
+                    <a class="switch" data-toggle="trigger" href="#<?=$data->title?>"><?=$data->title?></a>
+                </div>
+                <div  <?=$key > 0 ? 'style="display:none;"' : ''?> id="<?=$data->title?>" class="item content" data-role="content"><?=$data->content?></div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+    <div class="container-mobile">
+        <div data-mage-init='{"customScript": {}}'>
+        <div id="custom-accordion">
+            <?php foreach (json_decode($block->getListData()) as $key => $data): ?>
+                <div data-role="collapsible">
+                <div data-role="trigger">
+                    <span><b style="cursor:pointer"><?=$data->title?></b></span>
+                </div>
+                <div <?=$key > 0 ? 'style="display:none;"' : ''?> data-role="content"><?=$data->content?></div>
+            </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</div>
+
+
+
