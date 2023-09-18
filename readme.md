@@ -35,6 +35,8 @@ Read the `data.json` file and display the data as tabs on desktop and an accordi
 * Design and styling.
 * Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
 
+my answer: plus + is adding a string causing it to return NaN
+
 Submission
 ---
 We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.

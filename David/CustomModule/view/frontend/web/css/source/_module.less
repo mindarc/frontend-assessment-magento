@@ -1,0 +1,72 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .font-color-white {
+        color: @color-white;
+    }
+
+    .jumbotron-image {
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .card {
+        margin: 10px;
+
+        .card-body {
+            a {
+                color: #000;
+                border-radius: 24px;
+            }
+        }
+    }
+}
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .jumbotron-image {
+        background-image: url("../images/1920x650.png");
+    }
+
+    .jumbotron {
+        .container {
+            h1 {
+                margin-bottom: 0px;
+            }
+        }
+    }
+
+    .card {
+        width: 22em;
+    }
+}
+
+//
+//  Mobile @screen__m
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .page-wrapper {
+        .page-header {
+            margin-bottom: 0px;
+        }
+    }
+
+    .page-main {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .jumbotron-image {
+        background-image: url("../images/600x600.png");
+    }
+
+    .card {
+        width: 100%;
+        padding: 20px;
+    }
+}
